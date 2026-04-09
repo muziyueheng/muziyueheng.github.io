@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基础入门—搭建安全拓展, 网安">
-    <meta name="description" content="">
+    <meta name="keywords" content="基础入门—加密算法, 网安">
+    <meta name="description" content="基础入门 加密算法常见的加密编码等算法解析MD5  SHA  ASC  进制  时间戳  URL  BASE64  Unescape  AES  DES  等
+md5加密
+图中的不可逆就是没办法从密文转换为明文
+cmd5也可以从网站中的cm">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基础入门—搭建安全拓展 | 数字防线手记</title>
+    <title>基础入门—加密算法 | 数字防线手记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -332,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基础入门—搭建安全拓展</h1>
+                    <h1 class="description center-align post-title">基础入门—加密算法</h1>
                 </div>
             </div>
         </div>
@@ -359,9 +362,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                <span class="chip bg-color">基础入门</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -394,7 +401,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="基础入门-加密算法"><a href="#基础入门-加密算法" class="headerlink" title="基础入门 加密算法"></a>基础入门 加密算法</h1><h3 id="常见的加密编码等算法解析"><a href="#常见的加密编码等算法解析" class="headerlink" title="常见的加密编码等算法解析"></a>常见的加密编码等算法解析</h3><p>MD5  SHA  ASC  进制  时间戳  URL  BASE64  Unescape  AES  DES  等</p>
+<h4 id="md5加密"><a href="#md5加密" class="headerlink" title="md5加密"></a>md5加密</h4><p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918221034947.png" alt="image-20250918221034947"></p>
+<p>图中的不可逆就是没办法从密文转换为明文</p>
+<h4 id="cmd5"><a href="#cmd5" class="headerlink" title="cmd5"></a>cmd5</h4><p>也可以从网站中的cmd5中解密</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918221819231.png" alt="image-20250918221819231"></p>
+<p>cm后的数字越大   密文越长</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918221943060.png" alt="image-20250918221943060"></p>
+<h4 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h4><p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918222849497.png" alt="image-20250918222849497"></p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918223009898.png" alt="image-20250918223009898"></p>
+<h4 id="url"><a href="#url" class="headerlink" title="url"></a>url</h4><p>例如 在一个网址中输入空格   那么空格就会变成%20      那么这个%20 就是url编码</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918224224587.png" alt="image-20250918224224587"></p>
+<p>如果网址中出现%31 的话  他会再一次进行编码    也就是进行了两次加密了</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918225500312.png" alt="image-20250918225500312"></p>
+<h4 id="BASE64编码"><a href="#BASE64编码" class="headerlink" title="BASE64编码"></a>BASE64编码</h4><p>   明文越长 密文越长 编码中会出现  大小写加数字   在最后也常出现&#x3D;  或者&#x3D;&#x3D;   主要应用再web应用中</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918225746678.png" alt="image-20250918225746678"></p>
+<h4 id="unescape"><a href="#unescape" class="headerlink" title="unescape"></a>unescape</h4><p>普通文本里的文本个数如果是单数   那么编码出来的后四位是两个0   如果是双数 那么就是4个0</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250918235238624.png" alt="image-20250918235238624"></p>
+<h4 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h4><p>AES是一种安全的加密方式  里面会涉及到4个的加密方式   加密更强</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250919000027753.png" alt="image-20250919000027753"></p>
+<p>加密之后再进行解密  就会出现乱码</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250919000258930.png" alt="image-20250919000258930"></p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250919000341007.png" alt="image-20250919000341007"></p>
+<h3 id="常见加密形式算法解析"><a href="#常见加密形式算法解析" class="headerlink" title="常见加密形式算法解析"></a>常见加密形式算法解析</h3><p>直接加密  带salt  带密码  带偏移  带位数  带位数  带模式  带干扰  自定义组合</p>
+<p>越复杂  加密强度越高  相对于逆向难度就会越大</p>
+<h3 id="常见的解密方式"><a href="#常见的解密方式" class="headerlink" title="常见的解密方式"></a>常见的解密方式</h3><p>枚举 自定义逆向算法 可逆向</p>
+<p>了解常规加密算法的特性</p>
+<p>长度位数  字符规律  代码分析 搜索获取</p>
+<p>代码分析 根据自己写的去分析代码   </p>
+
                 
             </div>
             <hr/>
@@ -420,7 +455,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2026/04/09/2/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%90%AD%E5%BB%BA%E5%AE%89%E5%85%A8%E6%8B%93%E5%B1%95/">http://example.com/2026/04/09/2/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%90%AD%E5%BB%BA%E5%AE%89%E5%85%A8%E6%8B%93%E5%B1%95/</a>
+                    <a href="http://example.com/2026/04/09/6/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">http://example.com/2026/04/09/6/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -457,7 +492,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                    <span class="chip bg-color">基础入门</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -505,13 +544,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2026/04/09/3/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94Web%E6%BA%90%E7%A0%81%E6%8B%93%E5%B1%95/">
+                <a href="/2026/04/09/7/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94CDN%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="基础入门—Web源码拓展">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="基础入门—CDN相关技术">
                         
-                        <span class="card-title">基础入门—Web源码拓展</span>
+                        <span class="card-title">基础入门—CDN相关技术</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -533,6 +572,14 @@
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">基础入门</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -542,13 +589,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/04/09/5/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/">
+                <a href="/2026/04/09/5/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E7%B3%BB%E7%BB%9F%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="基础入门—数据包拓展">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="基础入门—系统及数据库">
                         
-                        <span class="card-title">基础入门—数据包拓展</span>
+                        <span class="card-title">基础入门—系统及数据库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -568,6 +615,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">基础入门</span>
+                    </a>
+                    
                 </div>
                 
             </div>

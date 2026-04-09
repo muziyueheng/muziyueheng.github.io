@@ -4,8 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基础入门—系统及数据库, 网安">
-    <meta name="description" content="">
+    <meta name="keywords" content="基础入门—信息收集（1）, 网安">
+    <meta name="description" content="信息收集 架构信息收集是一个非常重要的环节   渗透测试的思路就是从信息收集开始
+
+获得程序源码对后期的测试有着很高的效率
+waf会对测试造成干扰
+信息收集就是把网上可以测试的点找出来  然后再找出最脆弱的点
+站点搭建分析目录型站点
+在其目">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基础入门—系统及数据库 | 数字防线手记</title>
+    <title>基础入门—信息收集（1） | 数字防线手记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -332,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基础入门—系统及数据库</h1>
+                    <h1 class="description center-align post-title">基础入门—信息收集（1）</h1>
                 </div>
             </div>
         </div>
@@ -359,9 +365,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                <span class="chip bg-color">基础入门</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -394,7 +404,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="信息收集-架构"><a href="#信息收集-架构" class="headerlink" title="信息收集 架构"></a>信息收集 架构</h1><p>信息收集是一个非常重要的环节   渗透测试的思路就是从信息收集开始</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922021628187.png" alt="image-20250922021628187"></p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922021658296.png" alt="image-20250922021658296">获得程序源码对后期的测试有着很高的效率</p>
+<p>waf会对测试造成干扰</p>
+<p>信息收集就是把网上可以测试的点找出来  然后再找出最脆弱的点</p>
+<h3 id="站点搭建分析"><a href="#站点搭建分析" class="headerlink" title="站点搭建分析"></a>站点搭建分析</h3><h4 id="目录型站点"><a href="#目录型站点" class="headerlink" title="目录型站点"></a>目录型站点</h4><p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922023350465.png" alt="image-20250922023350465"></p>
+<p>在其目录下存在这样的一个网站</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922023602777.png" alt="image-20250922023602777"></p>
+<p>sti.blcu.edu.cn   和sti.blcu.edu&#x2F;bbs   可以理解为两个程序   但原则上是用一个网站  只是目录不同</p>
+<p>程序出现漏洞  整个网站就会遭殃</p>
+<h4 id="端口类站点"><a href="#端口类站点" class="headerlink" title="端口类站点"></a>端口类站点</h4><p> web.0516jz.com</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922024604338.png" alt="image-20250922024604338"></p>
+<p> web.0516jz.com:8080</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922024652599.png" alt="image-20250922024652599"></p>
+<p>这个网站是以端口的方式分开的</p>
+<p>和目录类的道理相似</p>
+<p>端口也可以从网上搜索信息   也可以进行端口扫描</p>
+<h4 id="子域名"><a href="#子域名" class="headerlink" title="子域名"></a>子域名</h4><p>不加bbs</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922025323606.png" alt="image-20250922025323606"></p>
+<p>加了 bbs</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922025312600.png" alt="image-20250922025312600"></p>
+<p>分两种</p>
+<p>一种同一个服务器</p>
+<p>一种不同服务器    又分两种：一种同网段一种不同网段</p>
+<h4 id="类似域名"><a href="#类似域名" class="headerlink" title="类似域名"></a>类似域名</h4><p>.com </p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922030233061.png" alt="image-20250922030233061"></p>
+<p>.cn</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922030313068.png" alt="image-20250922030313068"></p>
+<p>都是一个公司的网，域名可能有很多</p>
+<p>域名多   漏洞的可能性就更多</p>
+<p>如何去查</p>
+<p>后缀不一样的可以试一试 com  cn  等一些后缀</p>
+<p>或者对中间  72jz  这个部分进行修改  数字的前后  数字的大小  字母等的增加 删除 修改等  去找域名</p>
+<h4 id="旁注-c段"><a href="#旁注-c段" class="headerlink" title="旁注  c段"></a>旁注  c段</h4><p>旁注就是同一服务器不同站点   两个网站或者多个网站放在同一个站点  其中的 一个网站是你的目标</p>
+<p>c段就是同网段不同服务器不同站点     这个网可能有多个站点    用其中的某个ip地址进行测试</p>
+<p>例如 旁注：   （前提条件   对方有多个站点服务器）</p>
+<p>192.168.1.2           存在     <a target="_blank" rel="noopener" href="http://www.a.com/">www.a.com</a>   <a target="_blank" rel="noopener" href="http://www.b.com/">www.b.com</a>  <a target="_blank" rel="noopener" href="http://www.c.com/">www.c.com</a>   等多个网站</p>
+<p>可以通过旁注查到a  或者c   那么我们可以从  a  或b下手</p>
+<p>独立站点服务器</p>
+<p>c段    同网段不同服务器不同站点 </p>
+<p>192.168.1.2           存在     <a target="_blank" rel="noopener" href="http://www.a.com/">www.a.com</a>   <a target="_blank" rel="noopener" href="http://www.b.com/">www.b.com</a>  <a target="_blank" rel="noopener" href="http://www.c.com/">www.c.com</a></p>
+<p>192.168.1.3            存在     <a target="_blank" rel="noopener" href="http://www.d.com/">www.d.com</a>   <a target="_blank" rel="noopener" href="http://www.e.com/">www.e.com</a>  <a target="_blank" rel="noopener" href="http://www.f.com/">www.f.com</a>  </p>
+<p>在192.168.1.2中的a b c中搞不了   那么可以查询网段 比如192.168.1.3在其下去查这个其下的站点  d e f  在通过服务器提权  获取权限  在通过内网   去攻击目标网段192.168.1.2</p>
+<h4 id="WAF"><a href="#WAF" class="headerlink" title="WAF"></a>WAF</h4><p>可以用WAFwoof去识别WAF</p>
+<p>如果对方有waf  就不要直接去扫描     </p>
+<p>也可以直接手动去找  f12  网络  请求头中找  X-Powered-By:</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250922040224794.png" alt="image-20250922040224794"></h4>
                 
             </div>
             <hr/>
@@ -420,7 +476,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2026/04/09/6/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E7%B3%BB%E7%BB%9F%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/">http://example.com/2026/04/09/6/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E7%B3%BB%E7%BB%9F%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/</a>
+                    <a href="http://example.com/2026/04/09/5463/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%881%EF%BC%89/">http://example.com/2026/04/09/5463/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%881%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -457,7 +513,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                    <span class="chip bg-color">基础入门</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -505,13 +565,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2026/04/09/4/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">
+                <a href="/2026/04/09/%E6%89%93%E4%B8%8D%E6%89%93%E6%B8%B8%E6%88%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基础入门—加密算法">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="打不打游戏">
                         
-                        <span class="card-title">基础入门—加密算法</span>
+                        <span class="card-title">打不打游戏</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -533,6 +593,14 @@
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BC%A0%E6%A0%91%E5%9D%A4/">
+                        <span class="chip bg-color">张树坤</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -542,13 +610,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/04/09/3/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94Web%E6%BA%90%E7%A0%81%E6%8B%93%E5%B1%95/">
+                <a href="/2026/04/09/7/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94CDN%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="基础入门—Web源码拓展">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="基础入门—CDN相关技术">
                         
-                        <span class="card-title">基础入门—Web源码拓展</span>
+                        <span class="card-title">基础入门—CDN相关技术</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -568,6 +636,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">基础入门</span>
+                    </a>
+                    
                 </div>
                 
             </div>

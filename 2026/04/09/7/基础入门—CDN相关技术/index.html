@@ -5,7 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="基础入门—CDN相关技术, 网安">
-    <meta name="description" content="">
+    <meta name="description" content="CDN相关技术CDN   内容分发网络  使用户就近获取所需内容 降低网络拥塞，提高用户访问响应速度和命中率
+判断CDN使用超级ping
+
+
+通过超级ping可以看到有很多不一样的解析ip   说明是存在CDN的   如果说ping完之后只">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -359,9 +363,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                <span class="chip bg-color">基础入门</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -394,7 +402,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="CDN相关技术"><a href="#CDN相关技术" class="headerlink" title="CDN相关技术"></a>CDN相关技术</h1><p>CDN   内容分发网络  使用户就近获取所需内容 降低网络拥塞，提高用户访问响应速度和命中率</p>
+<h3 id="判断CDN"><a href="#判断CDN" class="headerlink" title="判断CDN"></a>判断CDN</h3><p>使用超级ping</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250920165304291.png" alt="image-20250920165304291"></p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250920165332439.png" alt="image-20250920165332439"></p>
+<p>通过超级ping可以看到有很多不一样的解析ip   说明是存在CDN的   如果说ping完之后只有一种IP 那么就不存在CDN</p>
+<h3 id="目前常见的CDN绕过技术有哪些"><a href="#目前常见的CDN绕过技术有哪些" class="headerlink" title="目前常见的CDN绕过技术有哪些"></a>目前常见的CDN绕过技术有哪些</h3><p>子域名查询</p>
+<p>邮件服务查询</p>
+<p>国外地址请求</p>
+<p>遗留文件，  扫描全网    </p>
+<p>黑暗引擎搜索特定文件（ zoomeye，fofa ，shodan） </p>
+<p> DNS历史记录，以量打量   就是为了把流量耗尽</p>
+<h3 id="DNS历史记录-第三方接口"><a href="#DNS历史记录-第三方接口" class="headerlink" title="DNS历史记录&#x3D;第三方接口"></a>DNS历史记录&#x3D;第三方接口</h3><h4 id="第三方查询网站"><a href="#第三方查询网站" class="headerlink" title="第三方查询网站"></a>第三方查询网站</h4><p><a target="_blank" rel="noopener" href="https://get-site-ip.com/">https://get-site-ip.com/</a></p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250920192123765.png" alt="image-20250920192123765"></p>
+<h4 id="微步"><a href="#微步" class="headerlink" title="微步"></a>微步</h4><p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250920192321407.png" alt="image-20250920192321407"></p>
+<h4 id="从邮件原文中找到IP地址"><a href="#从邮件原文中找到IP地址" class="headerlink" title="从邮件原文中找到IP地址"></a>从邮件原文中找到IP地址</h4><p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250920195316370.png" alt="image-20250920195316370"></p>
+<h4 id="从邮件中可以找到其真实地址-再用第三方去查ip-可能会出现ip地址不用的情况"><a href="#从邮件中可以找到其真实地址-再用第三方去查ip-可能会出现ip地址不用的情况" class="headerlink" title="从邮件中可以找到其真实地址  再用第三方去查ip    可能会出现ip地址不用的情况"></a>从邮件中可以找到其真实地址  再用第三方去查ip    可能会出现ip地址不用的情况</h4><p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250920195657682.png" alt="image-20250920195657682"></p>
+<p>从邮件中可以找到其真实地址  再用第三方去查ip    可能会出现ip地址不用的情况</p>
+<p>这个时候就可以去看备案号   找出对应的地区（邮件源码 和第三方 都不是绝对准确的）</p>
+<h4 id="扫全网的工具"><a href="#扫全网的工具" class="headerlink" title="扫全网的工具"></a>扫全网的工具</h4><p>fuckcdn ，<strong>w8fuckcdn</strong>  zmapss</p>
+<p>需要提前配置</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250920204320823.png" alt="image-20250920204320823"></p>
+
                 
             </div>
             <hr/>
@@ -457,7 +486,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                    <span class="chip bg-color">基础入门</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -505,7 +538,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2026/04/09/8/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%881%EF%BC%89/">
+                <a href="/2026/04/09/5463/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%881%EF%BC%89/">
                     <div class="card-image">
                         
                         
@@ -533,6 +566,14 @@
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">基础入门</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -542,7 +583,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/04/09/4/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">
+                <a href="/2026/04/09/6/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
                         
                         
@@ -568,6 +609,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">基础入门</span>
+                    </a>
+                    
                 </div>
                 
             </div>

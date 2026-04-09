@@ -5,7 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="基础入门—数据包拓展, 网安">
-    <meta name="description" content="">
+    <meta name="description" content="基础入门 数据包扩展HTTP&amp;#x2F;S数据包Request  请求数据包
+Response 返回数据包
+
+ 如果在中间出现一个代理  那么请求包会先经过代理 返回包也会经过数据包
+
+因此代理服务器在发送和返回数据包的时候可以进行修改
+h">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -359,9 +365,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                <span class="chip bg-color">基础入门</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -394,7 +404,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="基础入门-数据包扩展"><a href="#基础入门-数据包扩展" class="headerlink" title="基础入门 数据包扩展"></a>基础入门 数据包扩展</h1><h3 id="HTTP-S数据包"><a href="#HTTP-S数据包" class="headerlink" title="HTTP&#x2F;S数据包"></a>HTTP&#x2F;S数据包</h3><p>Request  请求数据包</p>
+<p>Response 返回数据包</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250914212444907.png" alt="image-20250914212444907"></p>
+<p> 如果在中间出现一个代理  那么请求包会先经过代理 返回包也会经过数据包</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250914212733715.png" alt="image-20250914212733715"></p>
+<p>因此代理服务器在发送和返回数据包的时候可以进行修改</p>
+<p>http （明文）  HTTP    TCP IP</p>
+<p>https（加密）HTTP SSL or  TLS TCP IP </p>
+<p>https请求</p>
+<ol>
+<li>https请求——2.服务器响应——3.证书校验，生成密码，公钥加密——4.加密信息——5.私钥解密。解密握手消息，验证HASH——6.加密信息——7.解密握手消息，验证HASH——8。正常加密通信</li>
+</ol>
+<p>HTTP简要通信过程</p>
+<p>建立连接    发送请求数据包  返回响应数据包  关闭连接</p>
+<h3 id="Request请求数据包数据格式"><a href="#Request请求数据包数据格式" class="headerlink" title="Request请求数据包数据格式"></a>Request请求数据包数据格式</h3><p>1.请求行： 请求类型&#x2F;请求资源路径，协议版本和类型</p>
+<p>2.请求头：一些键值对，浏览器与web服务器之间都可以发送，特定的某种含义</p>
+<p>3.空行：请求头与请求体之间用一个空行隔开</p>
+<p>4.请求体：要发送的数据（一般post提交会使用）  例如 user&#x3D;123&amp;pass&#x3D;123</p>
+<h4 id="请求行"><a href="#请求行" class="headerlink" title="请求行"></a>请求行</h4><p>请求行由三个标记组成：请求方法，请求url和http版本，他们用空格分享</p>
+<p>例如 GET  &#x2F;index.html  HTTP&#x2F;1.1</p>
+<p>HTTp规划定义了8种可能的请求方法： </p>
+<p>GET　　HEAD　　POST　　PUT　　DELETE　　OPTIONS           TRACE        CONNECT</p>
+<h4 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h4><p>由关键字&#x2F;值对组成，每行一对，关键字和值用冒号分享。 请求头标通知服务器腾于客户端的功能和标识。</p>
+<p> HOST  主机或域名地址</p>
+<p>Accept 浏览器或其他客户可以接受的MIME文件格式</p>
+<p>User-Agent 客户浏览器名称</p>
+<p>Host 对应网址URL种的Web名称和端口号</p>
+<p>Accept-Langeuage 可以接受的语言种类</p>
+<p>connection 告诉服务器是否可以维持固定的HTTp连接</p>
+<p>Cookie  记载服务器相关的用户信息</p>
+<p>Referer 表明产生请求的网页URL</p>
+<p>Content-Type  表明request的内容类型</p>
+<p>Accept-Charset 浏览器可以接受的字符编码</p>
+<p>Accept-Encoding  浏览器可以接受的编码方式</p>
+<h3 id="Response返回数据包数据格式"><a href="#Response返回数据包数据格式" class="headerlink" title="Response返回数据包数据格式"></a>Response返回数据包数据格式</h3><p>一个响应由四个部分组成：状态行，响应头标，空行，响应数据</p>
+<p>状态行：协议版本，数字形式的状态代码和状态描述，个元素之间以空格分隔</p>
+<p>响应头标：包含服务器类型，日期，长度，内容类型等</p>
+<p>空行：响应头与响应体之间用空行隔开</p>
+<p>响应数据 浏览器会将实体内容中的数据取出来，生成相应的页面</p>
+<h4 id="HTTP响应码"><a href="#HTTP响应码" class="headerlink" title="HTTP响应码"></a>HTTP响应码</h4><p>1XX  信息，请求收到，继续处理</p>
+<p>2XX 成功，行为被成功地接受，理解和采纳</p>
+<p>3XX 重定向，为了完成请求，必须进一步执行的动作</p>
+<p>4XX客户端错误</p>
+<p>5XX  服务器错误</p>
+<p>200  存在文件</p>
+<p>403  存在文件夹</p>
+<p>3xx  均可能存在</p>
+<p>404  不存在文件及文件夹</p>
+<p>500  均可能存在</p>
+<p>我们可以通过响应码的值来反映这个文件存不存在</p>
+<p>御剑扫描也是利用响应码值</p>
+<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250914224102898.png" alt="image-20250914224102898"></p>
+
                 
             </div>
             <hr/>
@@ -420,7 +482,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2026/04/09/5/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/">http://example.com/2026/04/09/5/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/</a>
+                    <a href="http://example.com/2026/04/09/2/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/">http://example.com/2026/04/09/2/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -457,7 +519,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                                    <span class="chip bg-color">基础入门</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -505,7 +571,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2026/04/09/2/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%90%AD%E5%BB%BA%E5%AE%89%E5%85%A8%E6%8B%93%E5%B1%95/">
+                <a href="/2026/04/09/3/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E6%90%AD%E5%BB%BA%E5%AE%89%E5%85%A8%E6%8B%93%E5%B1%95/">
                     <div class="card-image">
                         
                         
@@ -533,6 +599,14 @@
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">基础入门</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -546,9 +620,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="基础入门-Web源码拓展">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="基础入门-概念名词">
                         
-                        <span class="card-title">基础入门-Web源码拓展</span>
+                        <span class="card-title">基础入门-概念名词</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
