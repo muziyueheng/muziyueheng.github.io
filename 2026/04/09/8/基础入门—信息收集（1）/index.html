@@ -4,14 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基础入门-Web源码拓展, 网安">
-    <meta name="description" content="域名相当于网站的网址
-可以在万网注册 
-多级域名的收集可以更方便的去做渗透测试
-DNS域名系统服务协议   可以让域名和IP地址的相互转换
-host可以重定向解析
-在解析IP地址的时候会先找host中的IP
-如果有的话  会以host中的I">
+    <meta name="keywords" content="基础入门—信息收集（1）, 网安">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +17,7 @@ host可以重定向解析
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基础入门-Web源码拓展 | 数字防线手记</title>
+    <title>基础入门—信息收集（1） | 数字防线手记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -338,12 +332,12 @@ host可以重定向解析
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基础入门-Web源码拓展</h1>
+                    <h1 class="description center-align post-title">基础入门—信息收集（1）</h1>
                 </div>
             </div>
         </div>
@@ -365,13 +359,9 @@ host可以重定向解析
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
-                                <span class="chip bg-color">基础入门</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -404,40 +394,7 @@ host可以重定向解析
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>相当于网站的网址</p>
-<p>可以在万网注册 </p>
-<p>多级域名的收集可以更方便的去做渗透测试</p>
-<h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><p>域名系统服务协议   可以让域名和IP地址的相互转换</p>
-<h3 id="host"><a href="#host" class="headerlink" title="host"></a>host</h3><p>可以重定向解析</p>
-<p>在解析IP地址的时候会先找host中的IP</p>
-<p>如果有的话  会以host中的IP地址为准   如果没用就会在互联网中找     </p>
-<p>可以通过修改host的地址    用于钓鱼工具</p>
-<p>另外</p>
-<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250913214759599.png" alt="image-20250913214759599"></p>
-<p>2.2.2.2可以看作一个节点</p>
-<h4 id="CND"><a href="#CND" class="headerlink" title="CND"></a>CND</h4><p>缓存节点技术  分布多个节点    会根据自己的地区分配节点</p>
-<h3 id="脚本语言"><a href="#脚本语言" class="headerlink" title="脚本语言"></a>脚本语言</h3><p>常见的脚本语言python JavaScript asp php aspx javaweb等</p>
-<h3 id="后门"><a href="#后门" class="headerlink" title="后门"></a>后门</h3><p>在进行渗透测试或者非法入侵的时候会留下一个后门文件   以便再次进行操作 </p>
-<p>相当于一个通道 方便去操作</p>
-<p>网站后门（webshell ）  服务器后门</p>
-<p>更隐蔽  更方便的进行控制</p>
-<h4 id="免杀"><a href="#免杀" class="headerlink" title="免杀"></a>免杀</h4><p>防止被相关软件检测到</p>
-<h3 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h3><p>web组成构架模型：</p>
-<p>​           网站源码 ：分脚本类型  分应用方向     什么源码的选择将决定可能存在什么漏洞</p>
-<p>​           操作系统：windows Linux             决定什么攻击方式</p>
-<p>​           中间件：apache iis tomcat nginx</p>
-<p>​           数据库：access mysql mssql Oracle sybase db2 postsql      获取数据的权限</p>
-<p>web出现的漏洞比较多  获得权限之后再用web进行权限提升 拿到某台主机的权限   一步步进入最里面所以要以web为主</p>
-<h3 id="WEB相关安全漏洞"><a href="#WEB相关安全漏洞" class="headerlink" title="WEB相关安全漏洞"></a>WEB相关安全漏洞</h3><p>WEB源码类对应漏洞：</p>
-<p>SQL注入  上传 xss 代码执行 变量覆盖 逻辑漏洞 反序列化等</p>
-<p>网站 功能越多  漏洞可能也会越多</p>
-<p>app安全：很多app都是在套用web    只要是套用 web上的漏洞就会出现在app中</p>
-<h3 id="多级域名的枚举查找"><a href="#多级域名的枚举查找" class="headerlink" title="多级域名的枚举查找"></a>多级域名的枚举查找</h3><p>浏览器查找   </p>
-<p>可以在每个站下方都会有一个多级域名</p>
-<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-09-13%20230653.png" alt="屏幕截图 2025-09-13 230653"></p>
-<p>也可以使用相应的工具进行暴力枚举</p>
-<p><img src="https://muziyueheng.oss-cn-zhangjiakou.aliyuncs.com/image-20250914001806214.png" alt="image-20250914001806214"></p>
-
+                
                 
             </div>
             <hr/>
@@ -463,7 +420,7 @@ host可以重定向解析
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2026/04/09/frist/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-Web%E6%BA%90%E7%A0%81%E6%8B%93%E5%B1%95/">http://example.com/2026/04/09/frist/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-Web%E6%BA%90%E7%A0%81%E6%8B%93%E5%B1%95/</a>
+                    <a href="http://example.com/2026/04/09/8/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%881%EF%BC%89/">http://example.com/2026/04/09/8/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%881%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -500,11 +457,7 @@ host可以重定向解析
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
-                                    <span class="chip bg-color">基础入门</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -548,18 +501,17 @@ host可以重定向解析
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2026/04/09/frist/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-Web%E6%BA%90%E7%A0%81%E6%8B%93%E5%B1%95/">
+                <a href="/2026/04/09/9/%E6%89%93%E4%B8%8D%E6%89%93%E6%B8%B8%E6%88%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="基础入门-Web源码拓展">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="打不打游戏">
                         
-                        <span class="card-title">基础入门-Web源码拓展</span>
+                        <span class="card-title">打不打游戏</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -569,9 +521,9 @@ host可以重定向解析
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-04-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -580,12 +532,11 @@ host可以重定向解析
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
-                        <span class="chip bg-color">基础入门</span>
+                    <a href="/tags/%E5%BC%A0%E6%A0%91%E5%9D%A4/">
+                        <span class="chip bg-color">张树坤</span>
                     </a>
                     
                 </div>
@@ -596,16 +547,16 @@ host可以重定向解析
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/04/09/frist/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-Web%E6%BA%90%E7%A0%81%E6%8B%93%E5%B1%95/">
+                <a href="/2026/04/09/7/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E2%80%94CDN%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="基础入门-Web源码拓展">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="基础入门—CDN相关技术">
                         
-                        <span class="card-title">基础入门-Web源码拓展</span>
+                        <span class="card-title">基础入门—CDN相关技术</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -625,15 +576,6 @@ host可以重定向解析
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
-                        <span class="chip bg-color">基础入门</span>
-                    </a>
-                    
                 </div>
                 
             </div>
