@@ -599,6 +599,93 @@
         </div>
     </div>
 </div>
+<!-- 我的资料卡片（左边悬浮效果） -->
+
+<div id="myinfo-aside" class="col l3 hide-on-med-and-down" style="margin-top: 40px;">
+    <div class="myinfo-widget card" style="background-color: white;">
+        <div class="card-content">
+            <div class="center-align">
+                <!-- 头像 -->
+                <img src="/medias/logo.png" 
+                     style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                
+                <!-- 姓名 -->
+                <div style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: #0e9e9e;">
+                    月恒
+                </div>
+                
+                <!-- QQ -->
+                
+                    <div style="margin: 8px 0; text-align: left; font-size: 14px;">
+                        <i class="fab fa-qq" style="width: 25px; color: #12B7F5;"></i>
+                        <span style="margin-left: 5px;">1761442677</span>
+                    </div>
+                
+                
+                <!-- 邮箱 -->
+                
+                    <div style="margin: 8px 0; text-align: left; font-size: 14px;">
+                        <i class="fas fa-envelope" style="width: 25px; color: #FFA500;"></i>
+                        <span style="margin-left: 5px;">1761442677@qq.com</span>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(function () {
+    let myinfoHeight = parseInt($(window).height() * 0.4 - 64);
+    let $myinfoWidget = $('.myinfo-widget');
+    
+    $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        if (scroll > myinfoHeight) {
+            $myinfoWidget.addClass('myinfo-fixed');
+        } else {
+            $myinfoWidget.removeClass('myinfo-fixed');
+        }
+    });
+});
+</script>
+
+<style>
+.myinfo-fixed {
+    position: fixed;
+    top: 50px;
+    left: 20px;  /* 距离左边 20px */
+    width: 262px;
+    z-index: 999;
+    background-color: white !important;
+}
+</style>
+
+<style>
+/* 资料卡片左边悬浮样式 */
+.myinfo-widget {
+    transition: all 0.3s ease;
+}
+
+.myinfo-fixed {
+    position: fixed;
+    top: 20px;
+    width: 262px;  /* 和目录卡片宽度一致 */
+    z-index: 999;
+    background-color: white !important;
+}
+
+/* 响应式：屏幕变窄时取消固定 */
+@media only screen and (max-width: 992px) {
+    .myinfo-fixed {
+        position: relative;
+        top: auto;
+        left: auto !important;
+        width: auto;
+    }
+}
+</style>
+
 
 <!-- TOC 悬浮按钮. -->
 
