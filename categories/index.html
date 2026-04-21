@@ -125,6 +125,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/music" class="waves-effect waves-light">
+      
+      <i class="fas fa-music" style="zoom: 0.6;"></i>
+      
+      <span>音乐</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -205,6 +216,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/music" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-music"></i>
+			
+			音乐
 		</a>
           
         </li>
@@ -291,20 +313,20 @@
                 
                 
                 
-                <a href="/categories/Web%E6%BC%8F%E6%B4%9E/" title="Web漏洞: 4">
+                <a href="/categories/%E5%B7%A5%E5%85%B7/" title="工具: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">Web漏洞
-                        <span class="tag-length">4</span>
+                            style="background-color: #F9EBEA;">工具
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E5%B7%A5%E5%85%B7/" title="工具: 1">
+                <a href="/categories/Web%E6%BC%8F%E6%B4%9E/" title="Web漏洞: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">工具
-                        <span class="tag-length">1</span>
+                            style="background-color: #F5EEF8;">Web漏洞
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -360,7 +382,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"Web漏洞","max":6},{"name":"工具","max":6},{"name":"基础入门","max":6}],
+            indicator: [{"name":"工具","max":6},{"name":"Web漏洞","max":6},{"name":"基础入门","max":6}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -371,7 +393,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [4,1,5],
+                    value : [1,4,5],
                     name : '文章分类数量'
                 }
             ]
@@ -387,6 +409,51 @@
 
 
     <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="12944012851"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='false'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
     
 
     <div class="container row center-align"
